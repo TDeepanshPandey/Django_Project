@@ -1,2 +1,2 @@
 # Learning_Django
- Learning Django from Udemy
+ Learning Django from Udemy Online course
