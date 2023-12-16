@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Help Page</title>
+</head>
+<body>
+	<h1>Welcome to Users Page!</h1>
+    <div>
+	{% if user %}
+    <table>
+        <thead>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+        </thead>
+        {% for person in user %}
+        <tr>
+            <td>{{person.first_name}}</td>
+            <td>{{person.last_name}}</td>
+            <td>{{person.email}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <p> No Users Found </p>
+    {% endif %}
+    </div>
+</body>
+</html>

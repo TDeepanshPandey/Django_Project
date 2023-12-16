@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Forms Page</title>
+  </head>
+  <body>
+    <h1>Fill in the form</h1>
+    <p>Please provide below information</p>
+    <div class="container">
+      <form method="POST">
+      {{form.as_p}}
+      {% csrf_token %}
+      <input type="submit" name="Submit" value="Submit">
+    </form>
+    </div>
+  </body>
+</html>
