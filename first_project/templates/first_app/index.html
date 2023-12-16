@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <title>First App</title>
+    <link rel="stylesheet" href="{% static "css/style.css" %}"/>
+  </head>
+  <body>
+    <h1>Welcome to my page!</h1>
+    {{ insert_me }}
+    <p>This is a simple HTML page.</p>
+    <img src="{% static "images/3.png " %}" alt=""/>
+    <div class="djangotwo">
+      {% if access_records %}
+      <table>
+        <thead>
+          <th>Site Name</th>
+          <th>Date Accessed</th>
+        </thead>
+        {% for acc in access_records %}
+        <tr>
+          <td>{{acc.name}}</td>
+          <td>{{acc.date}}</td>
+        </tr>
+        {% endfor %}
+      </table>
+      {% else %}
+       <p>No access to records</p>
+      {% endif %}
+    </div>
+  </body>
+</html>

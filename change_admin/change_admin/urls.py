@@ -1,5 +1,5 @@
 """
-URL configuration for first_project project.
+URL configuration for change_admin project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -16,13 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from first_app import views
-from django.urls import include
 
 urlpatterns = [
-    path("",views.index, name='AI Simplified'),
     path("admin/", admin.site.urls),
-    path("first_app/",include("first_app.urls", namespace="first_app")),
-    path("logout/", views.user_logout, name="logout"),
-    path("special/", views.special, name="special"),
 ]
